@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="display-4"><%= @property.title %></h1>
+  <div class="card">
+    <div class="card-body">
+      <p class="card-text"><strong>Description:</strong> <%= @property.description %></p>
+      <p class="card-text"><strong>Price:</strong> <%= number_to_currency(@property.price) %></p>
+      <p class="card-text"><strong>Location:</strong> <%= @property.location %></p>
+    </div>
+  </div>
+</div>

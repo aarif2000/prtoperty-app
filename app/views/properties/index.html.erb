@@ -1,11 +1,27 @@
-<h1 class="display-4">All Properties</h1>
-
-<div class="list-group">
-  <% @properties.each do |property| %>
-    <a href="<%= property_path(property) %>" class="list-group-item list-group-item-action">
-      <%= property.name %>
-    </a>
-  <% end %>
+<div class="container">
+  <h1 class="display-4">All Properties</h1>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @properties.each do |property| %>
+          <tr>
+            <td><a href="<%= property_path(property) %>"><%= property.title %></a></td>
+            <td><%= property.description %></td>
+            <td><%= property.price %></td>
+            <td><%= property.location %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 
